@@ -28,6 +28,16 @@ REGISTRY_DIR = ROOT / "registry"
 REQUIRED = ["chart_name", "chart_name_en", "chart_family", "status"]
 VALID_STATUS = {"draft", "reviewed", "tested", "publication_ready"}
 
+# 卡片 id → 可执行模板文件名（templates/{python,r}/<base>.{py,R}）
+TEMPLATE_MAP = {
+    "散点图_Scatter": "scatter", "箱线图_Boxplot": "boxplot",
+    "小提琴图_Violin": "violin", "雨云图_Raincloud": "raincloud",
+    "折线趋势图_Line": "line", "点估计置信区间图_PointRange": "pointrange",
+    "森林图_ForestPlot": "forest", "KM生存曲线_KaplanMeier": "km",
+    "ROC曲线_ROC": "roc", "校准曲线_Calibration": "calibration",
+    "热图_Heatmap": "heatmap", "多面板组合图_MultiPanel": "multipanel",
+}
+
 
 def parse_frontmatter(text: str) -> dict:
     """极简 YAML frontmatter 解析：顶层标量、顶层列表(- x)、一层嵌套字典(key: v)。
@@ -93,6 +103,15 @@ def collect_cards():
         backend = fm.get("recommended_backend") or {}
         if not isinstance(backend, dict) or "r" not in backend or "python" not in backend:
             warnings.append(f"[后端] {rel} recommended_backend 缺 r/python")
+        base = TEMPLATE_MAP.get(md.stem)
+        tpl_py = f"templates/python/{base}.py" if base else None
+        tpl_r = f"templates/r/{base}.R" if base else None
+        if tpl_py and not (ROOT / tpl_py).exists():
+            tpl_py = None
+        if tpl_r and not (ROOT / tpl_r).exists():
+            tpl_r = None
+        if st in ("tested", "publication_ready") and (not tpl_py or not tpl_r):
+            warnings.append(f"[缺模板] {rel} status={st} 但缺可执行模板（py={bool(tpl_py)} r={bool(tpl_r)}）")
         cards.append({
             "id": md.stem,
             "file": rel,
@@ -101,6 +120,8 @@ def collect_cards():
             "chart_family": fm.get("chart_family"),
             "backend_r": backend.get("r") if isinstance(backend, dict) else None,
             "backend_python": backend.get("python") if isinstance(backend, dict) else None,
+            "template_python": tpl_py,
+            "template_r": tpl_r,
             "status": st,
             "priority": fm.get("priority"),
             "difficulty": fm.get("difficulty"),

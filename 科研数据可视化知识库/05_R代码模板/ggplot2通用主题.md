@@ -16,6 +16,9 @@ tags:
 
 > 一套**发表级 + 汇报级**可复用主题，供所有 R 图表卡片 `+ theme_pub()` 调用。设计原则：高数据墨水比、无衬线、刻度朝内、网格克制。
 
+> [!tip] 可执行版在 `templates/r/_common.R`
+> 本文是讲解；真正**可运行**的 `theme_pub()` / `save_gg()` / `save_dev()` / `mean_ci()` / 配色 `pal()` 在仓库根 `templates/r/_common.R`，被 12 个 R 模板 `source()`。出图请改 `templates/r/<图>.R` 的 `# >>> PARAM` 区，别从这里拷代码。冒烟测试：`bash scripts/smoke_test.sh`。
+
 ## 1. 设计原则（为什么这样写）
 
 - 去掉默认灰底/重网格 → 提高数据墨水比（Tufte）。

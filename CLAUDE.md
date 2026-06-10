@@ -15,7 +15,7 @@
 
 1. **配色不写死 hex** —— 一律引用 `03_配色系统/配色系统总览.md` 的命名色板（registry）。
 2. **frontmatter 是唯一事实源** —— 改了卡片 `status`/后端等字段后，**必须重跑** `python scripts/build_registry.py` 刷新 `registry/charts.json`、`registry/charts.md` 和 `00_总览/图表类型索引.md` 的状态列。**不要手改派生文件**。
-3. **代码模板的 `# >>> PARAM` 行是参数注入点** —— 复用模板时只动这些行。
+3. **可执行模板优先** —— 出图复用 `templates/{python,r}/` 下已冒烟测试的模板（registry 的 `template_python`/`template_r` 字段直连），只改顶部 `# >>> PARAM ... # <<< PARAM` 区；配色用 `pal("registry名")`。卡片里的代码块作讲解参考。改完模板跑 `bash scripts/smoke_test.sh`。
 
 ## 环境事实（不知道会踩坑）
 
@@ -38,7 +38,8 @@
 
 - `scripts/framingham_figs.py` / `.R` —— 真实数据各 14 张图（PNG 300dpi + PDF 矢量）→ `07_示例图像库/Framingham测试图/`。
 - `scripts/gallery_demo.py` —— 12 张范式 demo（合成数据）→ `07_示例图像库/示例图库demo/`。
-- `scripts/build_registry.py` —— 从 frontmatter 生成注册表 + 校验断链/缺字段（见铁律 2）。
+- `scripts/build_registry.py` —— 从 frontmatter 生成注册表 + 校验断链/缺字段/缺模板（见铁律 2）。
+- `templates/{python,r}/` —— 12 张 MVP 图的可执行参数化模板（合成数据默认，随处可跑）；`scripts/smoke_test.sh` 一键全跑校验。详见 `templates/README.md`。
 
 ## GitHub
 

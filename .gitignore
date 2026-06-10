@@ -1,6 +1,9 @@
 # R 默认绘图副产物（脚本误触会生成在工作目录）
 Rplots.pdf
 
+# 模板冒烟测试/预览输出
+templates/_preview/
+
 # Python
 __pycache__/
 *.pyc

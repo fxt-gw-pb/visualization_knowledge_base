@@ -16,6 +16,9 @@ tags:
 
 > Python 端发表级 + 汇报级 `rcParams` 预设，供所有 Python 卡片复用。对应 R 的 [[ggplot2通用主题]]。
 
+> [!tip] 可执行版在 `templates/python/_common.py`
+> 本文是讲解；真正**可运行**的 `set_theme()` / `save_fig()` / 配色 `pal()` + `REGISTRY` 在仓库根 `templates/python/_common.py`，被 12 个 Python 模板 `import`。出图请改 `templates/python/<图>.py` 的 `# >>> PARAM` 区，别从这里拷代码。冒烟测试：`bash scripts/smoke_test.sh`。
+
 ## 1. 设计原则
 
 - 去重网格、刻度朝内、无衬线、统一字号 → 高数据墨水比 + 全 figure 一致。
