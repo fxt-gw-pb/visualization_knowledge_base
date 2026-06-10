@@ -1,8 +1,35 @@
 {
   "_generated_by": "scripts/build_registry.py",
   "_note": "派生产物，请勿手改；改卡片 frontmatter 后重跑脚本",
-  "count": 12,
+  "count": 19,
   "charts": [
+    {
+      "id": "密度图_Density",
+      "file": "科研数据可视化知识库/02_图表类型知识卡片/01_分布图/密度图_Density.md",
+      "chart_name": "密度图",
+      "chart_name_en": "Density plot",
+      "chart_family": "分布图",
+      "backend_r": "ggplot2",
+      "backend_python": "seaborn",
+      "template_python": "templates/python/density.py",
+      "template_r": "templates/r/density.R",
+      "status": "tested",
+      "priority": "high",
+      "difficulty": "basic",
+      "data_type": [
+        "continuous",
+        "categorical_group"
+      ],
+      "tags": [
+        "dataviz",
+        "chart",
+        "density",
+        "kde",
+        "distribution",
+        "r",
+        "python"
+      ]
+    },
     {
       "id": "小提琴图_Violin",
       "file": "科研数据可视化知识库/02_图表类型知识卡片/01_分布图/小提琴图_Violin.md",
@@ -30,6 +57,58 @@
       ]
     },
     {
+      "id": "山峦图_Ridgeline",
+      "file": "科研数据可视化知识库/02_图表类型知识卡片/01_分布图/山峦图_Ridgeline.md",
+      "chart_name": "山峦图",
+      "chart_name_en": "Ridgeline plot",
+      "chart_family": "分布图",
+      "backend_r": "ggdist (ggridges 可选)",
+      "backend_python": "matplotlib (手搓)",
+      "template_python": "templates/python/ridgeline.py",
+      "template_r": "templates/r/ridgeline.R",
+      "status": "tested",
+      "priority": "medium",
+      "difficulty": "intermediate",
+      "data_type": [
+        "continuous",
+        "categorical_group"
+      ],
+      "tags": [
+        "dataviz",
+        "chart",
+        "ridgeline",
+        "joyplot",
+        "distribution",
+        "r",
+        "python"
+      ]
+    },
+    {
+      "id": "直方图_Histogram",
+      "file": "科研数据可视化知识库/02_图表类型知识卡片/01_分布图/直方图_Histogram.md",
+      "chart_name": "直方图",
+      "chart_name_en": "Histogram",
+      "chart_family": "分布图",
+      "backend_r": "ggplot2",
+      "backend_python": "seaborn/matplotlib",
+      "template_python": "templates/python/histogram.py",
+      "template_r": "templates/r/histogram.R",
+      "status": "tested",
+      "priority": "high",
+      "difficulty": "basic",
+      "data_type": [
+        "continuous"
+      ],
+      "tags": [
+        "dataviz",
+        "chart",
+        "histogram",
+        "distribution",
+        "r",
+        "python"
+      ]
+    },
+    {
       "id": "雨云图_Raincloud",
       "file": "科研数据可视化知识库/02_图表类型知识卡片/01_分布图/雨云图_Raincloud.md",
       "chart_name": "雨云图",
@@ -51,6 +130,33 @@
         "chart",
         "raincloud",
         "distribution",
+        "r",
+        "python"
+      ]
+    },
+    {
+      "id": "柱状图_Bar",
+      "file": "科研数据可视化知识库/02_图表类型知识卡片/02_组间比较图/柱状图_Bar.md",
+      "chart_name": "柱状图",
+      "chart_name_en": "Bar plot",
+      "chart_family": "组间比较图",
+      "backend_r": "ggplot2",
+      "backend_python": "matplotlib/seaborn",
+      "template_python": "templates/python/bar.py",
+      "template_r": "templates/r/bar.R",
+      "status": "tested",
+      "priority": "high",
+      "difficulty": "basic",
+      "data_type": [
+        "categorical_group",
+        "count_or_proportion"
+      ],
+      "tags": [
+        "dataviz",
+        "chart",
+        "bar",
+        "stacked",
+        "composition",
         "r",
         "python"
       ]
@@ -271,6 +377,33 @@
       ]
     },
     {
+      "id": "PCA图_PCA",
+      "file": "科研数据可视化知识库/02_图表类型知识卡片/08_高维数据图/PCA图_PCA.md",
+      "chart_name": "PCA 图",
+      "chart_name_en": "PCA plot",
+      "chart_family": "高维数据图",
+      "backend_r": "ggplot2 (prcomp)",
+      "backend_python": "scikit-learn + matplotlib",
+      "template_python": "templates/python/pca.py",
+      "template_r": "templates/r/pca.R",
+      "status": "tested",
+      "priority": "high",
+      "difficulty": "intermediate",
+      "data_type": [
+        "high_dimensional",
+        "categorical_group"
+      ],
+      "tags": [
+        "dataviz",
+        "chart",
+        "pca",
+        "dimensionality-reduction",
+        "high-dimensional",
+        "r",
+        "python"
+      ]
+    },
+    {
       "id": "热图_Heatmap",
       "file": "科研数据可视化知识库/02_图表类型知识卡片/08_高维数据图/热图_Heatmap.md",
       "chart_name": "热图",
@@ -297,6 +430,33 @@
       ]
     },
     {
+      "id": "火山图_Volcano",
+      "file": "科研数据可视化知识库/02_图表类型知识卡片/09_组学图/火山图_Volcano.md",
+      "chart_name": "火山图",
+      "chart_name_en": "Volcano plot",
+      "chart_family": "组学图",
+      "backend_r": "ggplot2",
+      "backend_python": "matplotlib/seaborn",
+      "template_python": "templates/python/volcano.py",
+      "template_r": "templates/r/volcano.R",
+      "status": "tested",
+      "priority": "high",
+      "difficulty": "intermediate",
+      "data_type": [
+        "effect_size",
+        "pvalue"
+      ],
+      "tags": [
+        "dataviz",
+        "chart",
+        "volcano",
+        "omics",
+        "differential-expression",
+        "r",
+        "python"
+      ]
+    },
+    {
       "id": "多面板组合图_MultiPanel",
       "file": "科研数据可视化知识库/02_图表类型知识卡片/10_多面板组合图/多面板组合图_MultiPanel.md",
       "chart_name": "多面板组合图",
@@ -318,6 +478,33 @@
         "multipanel",
         "figure",
         "layout",
+        "r",
+        "python"
+      ]
+    },
+    {
+      "id": "CONSORT流程图_Consort",
+      "file": "科研数据可视化知识库/02_图表类型知识卡片/11_医学流行病学常用图/CONSORT流程图_Consort.md",
+      "chart_name": "CONSORT 流程图",
+      "chart_name_en": "CONSORT flow diagram",
+      "chart_family": "医学流行病学常用图",
+      "backend_r": "ggplot2 (手搓) / DiagrammeR",
+      "backend_python": "matplotlib (手搓)",
+      "template_python": "templates/python/consort.py",
+      "template_r": "templates/r/consort.R",
+      "status": "tested",
+      "priority": "high",
+      "difficulty": "intermediate",
+      "data_type": [
+        "counts",
+        "flow_stages"
+      ],
+      "tags": [
+        "dataviz",
+        "chart",
+        "consort",
+        "flowchart",
+        "epidemiology",
         "r",
         "python"
       ]

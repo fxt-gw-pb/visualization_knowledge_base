@@ -36,7 +36,17 @@ TEMPLATE_MAP = {
     "森林图_ForestPlot": "forest", "KM生存曲线_KaplanMeier": "km",
     "ROC曲线_ROC": "roc", "校准曲线_Calibration": "calibration",
     "热图_Heatmap": "heatmap", "多面板组合图_MultiPanel": "multipanel",
+    # 第二批
+    "直方图_Histogram": "histogram", "密度图_Density": "density",
+    "山峦图_Ridgeline": "ridgeline", "柱状图_Bar": "bar",
+    "CONSORT流程图_Consort": "consort", "火山图_Volcano": "volcano",
+    "PCA图_PCA": "pca",
 }
+
+
+def wiki_target(raw: str) -> str:
+    """从 [[...]] 内文取目标笔记名：去别名(|/\\|)、去锚点(#)、去转义反斜杠。"""
+    return raw.split("|")[0].split("#")[0].strip().rstrip("\\").strip()
 
 
 def parse_frontmatter(text: str) -> dict:
@@ -153,7 +163,7 @@ def check_links(warnings):
             if in_fence:
                 continue
             for m in link_re.finditer(line):
-                target = m.group(1).split("|")[0].split("#")[0].strip()
+                target = wiki_target(m.group(1))
                 if not target:
                     continue
                 if Path(target).suffix.lower() in ASSET_EXT:   # 资源嵌入
@@ -210,7 +220,7 @@ def refresh_index(cards):
         if line.lstrip().startswith("|") and "✅" in line:
             m = link_re.search(line)
             if m:
-                card_id = m.group(1).split("|")[0].split("#")[0].strip()
+                card_id = wiki_target(m.group(1))
                 st = status_by_id.get(card_id)
                 if st:
                     cells = line.split("|")
@@ -225,15 +235,41 @@ def refresh_index(cards):
     return changed
 
 
+def refresh_family_indexes(cards):
+    """就地刷新各族索引 `_*.md`：含已知卡片链接、且无 ⬜(planned) 的表行，末列设为真实 status。"""
+    status_by_id = {c["id"]: c["status"] for c in cards}
+    link_re = re.compile(r"\[\[([^\]]+)\]\]")
+    changed = 0
+    for md in sorted(CARDS_DIR.rglob("_*.md")):
+        out, file_changed = [], False
+        for line in md.read_text(encoding="utf-8").splitlines():
+            if line.lstrip().startswith("|") and "⬜" not in line:
+                m = link_re.search(line)
+                if m:
+                    cid = wiki_target(m.group(1))
+                    st = status_by_id.get(cid)
+                    if st:
+                        cells = line.split("|")
+                        idx = len(cells) - 2 if cells[-1].strip() == "" else len(cells) - 1
+                        if cells[idx].strip() != st:
+                            cells[idx] = f" {st} "
+                            line = "|".join(cells); changed += 1; file_changed = True
+            out.append(line)
+        if file_changed:
+            md.write_text("\n".join(out) + "\n", encoding="utf-8")
+    return changed
+
+
 def main():
     cards, warnings = collect_cards()
     check_links(warnings)
     write_json(cards)
     write_md(cards)
     changed = refresh_index(cards)
+    fam_changed = refresh_family_indexes(cards)
 
     print(f"✅ 扫描卡片 {len(cards)} 张 → registry/charts.json + registry/charts.md")
-    print(f"✅ 图表类型索引.md 刷新状态单元格 {changed} 处")
+    print(f"✅ 索引刷新状态单元格：图表类型索引 {changed} 处 + 族索引 {fam_changed} 处")
     by_status = {}
     for c in cards:
         by_status[c["status"]] = by_status.get(c["status"], 0) + 1
