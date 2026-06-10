@@ -4,6 +4,9 @@ Rplots.pdf
 # 模板冒烟测试/预览输出
 templates/_preview/
 
+# 真实数据不入公开仓库（本地保留；他人需自行获取，见 Framingham数据集说明.md）
+data_example/*.csv
+
 # Python
 __pycache__/
 *.pyc

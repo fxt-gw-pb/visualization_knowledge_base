@@ -16,6 +16,12 @@ tags: [dataviz, framingham, dataset]
 - 背景：Framingham Heart Study（弗雷明汉心脏研究）——经典心血管流行病学队列。本 CSV 是其**纵向教学子集**（变量经过裁剪/重编码）。
 - 规模：**11168 行 × 12 列**；**4215 名受试者**；每人最多 3 个随访期。
 
+> [!important] 数据不随本（公开）仓库分发
+> 这是真实人群的健康记录，且其公开再分发许可不明确，因此**已从 git 追踪与历史中移除**（`data_example/*.csv` 列入 `.gitignore`）。
+> - 你**本地仍保留**该文件，复现脚本照常可跑。
+> - 他人复现：需自行获取数据并放到 `data_example/Framingham_data(1)_副本.csv`。原始 Framingham 数据须经 [BioLINCC](https://biolincc.nhlbi.nih.gov/studies/framcohort/) / dbGaP 申请并签数据使用协议（DUA）；教学子集常见于公开课程材料，使用前请自行确认其许可。
+> - 不依赖真实数据也能用：`templates/` 全部用**合成数据**，可直接出范式图。
+
 ## 2. 关键结构特征（务必先理解）
 
 ### 2.1 长格式（long format）
