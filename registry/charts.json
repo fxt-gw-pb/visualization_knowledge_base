@@ -1,0 +1,302 @@
+{
+  "_generated_by": "scripts/build_registry.py",
+  "_note": "派生产物，请勿手改；改卡片 frontmatter 后重跑脚本",
+  "count": 12,
+  "charts": [
+    {
+      "id": "小提琴图_Violin",
+      "file": "科研数据可视化知识库/02_图表类型知识卡片/01_分布图/小提琴图_Violin.md",
+      "chart_name": "小提琴图",
+      "chart_name_en": "Violin plot",
+      "chart_family": "分布图",
+      "backend_r": "ggplot2",
+      "backend_python": "seaborn",
+      "status": "tested",
+      "priority": "high",
+      "difficulty": "basic",
+      "data_type": [
+        "continuous",
+        "categorical_group"
+      ],
+      "tags": [
+        "dataviz",
+        "chart",
+        "violin",
+        "distribution",
+        "r",
+        "python"
+      ]
+    },
+    {
+      "id": "雨云图_Raincloud",
+      "file": "科研数据可视化知识库/02_图表类型知识卡片/01_分布图/雨云图_Raincloud.md",
+      "chart_name": "雨云图",
+      "chart_name_en": "Raincloud plot",
+      "chart_family": "分布图",
+      "backend_r": "ggdist + ggplot2",
+      "backend_python": "matplotlib/ptitprince",
+      "status": "tested",
+      "priority": "high",
+      "difficulty": "intermediate",
+      "data_type": [
+        "continuous",
+        "categorical_group"
+      ],
+      "tags": [
+        "dataviz",
+        "chart",
+        "raincloud",
+        "distribution",
+        "r",
+        "python"
+      ]
+    },
+    {
+      "id": "点估计置信区间图_PointRange",
+      "file": "科研数据可视化知识库/02_图表类型知识卡片/02_组间比较图/点估计置信区间图_PointRange.md",
+      "chart_name": "点估计置信区间图",
+      "chart_name_en": "Point-range plot",
+      "chart_family": "组间比较图",
+      "backend_r": "ggplot2",
+      "backend_python": "matplotlib",
+      "status": "tested",
+      "priority": "high",
+      "difficulty": "basic",
+      "data_type": [
+        "categorical_group",
+        "estimate_ci"
+      ],
+      "tags": [
+        "dataviz",
+        "chart",
+        "pointrange",
+        "estimate",
+        "ci",
+        "r",
+        "python"
+      ]
+    },
+    {
+      "id": "箱线图_Boxplot",
+      "file": "科研数据可视化知识库/02_图表类型知识卡片/02_组间比较图/箱线图_Boxplot.md",
+      "chart_name": "箱线图",
+      "chart_name_en": "Boxplot",
+      "chart_family": "组间比较图",
+      "backend_r": "ggplot2 + ggpubr",
+      "backend_python": "seaborn",
+      "status": "tested",
+      "priority": "high",
+      "difficulty": "basic",
+      "data_type": [
+        "continuous",
+        "categorical_group"
+      ],
+      "tags": [
+        "dataviz",
+        "chart",
+        "boxplot",
+        "distribution",
+        "comparison",
+        "r",
+        "python"
+      ]
+    },
+    {
+      "id": "散点图_Scatter",
+      "file": "科研数据可视化知识库/02_图表类型知识卡片/03_相关性图/散点图_Scatter.md",
+      "chart_name": "散点图",
+      "chart_name_en": "Scatter plot",
+      "chart_family": "相关性图",
+      "backend_r": "ggplot2",
+      "backend_python": "seaborn/matplotlib",
+      "status": "tested",
+      "priority": "high",
+      "difficulty": "basic",
+      "data_type": [
+        "continuous",
+        "continuous"
+      ],
+      "tags": [
+        "dataviz",
+        "chart",
+        "scatter",
+        "correlation",
+        "r",
+        "python"
+      ]
+    },
+    {
+      "id": "折线趋势图_Line",
+      "file": "科研数据可视化知识库/02_图表类型知识卡片/04_时间趋势图/折线趋势图_Line.md",
+      "chart_name": "折线趋势图",
+      "chart_name_en": "Line plot",
+      "chart_family": "时间趋势图",
+      "backend_r": "ggplot2",
+      "backend_python": "matplotlib/seaborn",
+      "status": "tested",
+      "priority": "high",
+      "difficulty": "basic",
+      "data_type": [
+        "continuous_time",
+        "continuous"
+      ],
+      "tags": [
+        "dataviz",
+        "chart",
+        "line",
+        "trend",
+        "longitudinal",
+        "r",
+        "python"
+      ]
+    },
+    {
+      "id": "森林图_ForestPlot",
+      "file": "科研数据可视化知识库/02_图表类型知识卡片/05_模型结果图/森林图_ForestPlot.md",
+      "chart_name": "森林图",
+      "chart_name_en": "Forest plot",
+      "chart_family": "模型结果图",
+      "backend_r": "forestploter",
+      "backend_python": "matplotlib",
+      "status": "tested",
+      "priority": "high",
+      "difficulty": "intermediate",
+      "data_type": [
+        "estimate_ci",
+        "categorical_term"
+      ],
+      "tags": [
+        "dataviz",
+        "chart",
+        "forestplot",
+        "odds-ratio",
+        "hazard-ratio",
+        "model",
+        "r",
+        "python"
+      ]
+    },
+    {
+      "id": "ROC曲线_ROC",
+      "file": "科研数据可视化知识库/02_图表类型知识卡片/06_预测模型评价图/ROC曲线_ROC.md",
+      "chart_name": "ROC 曲线",
+      "chart_name_en": "ROC curve",
+      "chart_family": "预测模型评价图",
+      "backend_r": "pROC",
+      "backend_python": "scikit-learn",
+      "status": "tested",
+      "priority": "high",
+      "difficulty": "intermediate",
+      "data_type": [
+        "predicted_probability",
+        "binary_outcome"
+      ],
+      "tags": [
+        "dataviz",
+        "chart",
+        "roc",
+        "auc",
+        "model-evaluation",
+        "r",
+        "python"
+      ]
+    },
+    {
+      "id": "校准曲线_Calibration",
+      "file": "科研数据可视化知识库/02_图表类型知识卡片/06_预测模型评价图/校准曲线_Calibration.md",
+      "chart_name": "校准曲线",
+      "chart_name_en": "Calibration curve",
+      "chart_family": "预测模型评价图",
+      "backend_r": "rms",
+      "backend_python": "scikit-learn",
+      "status": "tested",
+      "priority": "high",
+      "difficulty": "intermediate",
+      "data_type": [
+        "predicted_probability",
+        "binary_outcome"
+      ],
+      "tags": [
+        "dataviz",
+        "chart",
+        "calibration",
+        "model-evaluation",
+        "r",
+        "python"
+      ]
+    },
+    {
+      "id": "KM生存曲线_KaplanMeier",
+      "file": "科研数据可视化知识库/02_图表类型知识卡片/07_生存分析图/KM生存曲线_KaplanMeier.md",
+      "chart_name": "Kaplan-Meier 生存曲线",
+      "chart_name_en": "Kaplan-Meier curve",
+      "chart_family": "生存分析图",
+      "backend_r": "survminer",
+      "backend_python": "lifelines",
+      "status": "tested",
+      "priority": "high",
+      "difficulty": "intermediate",
+      "data_type": [
+        "time_to_event",
+        "event_indicator",
+        "categorical_group"
+      ],
+      "tags": [
+        "dataviz",
+        "chart",
+        "survival",
+        "kaplan-meier",
+        "r",
+        "python"
+      ]
+    },
+    {
+      "id": "热图_Heatmap",
+      "file": "科研数据可视化知识库/02_图表类型知识卡片/08_高维数据图/热图_Heatmap.md",
+      "chart_name": "热图",
+      "chart_name_en": "Heatmap",
+      "chart_family": "高维数据图",
+      "backend_r": "ComplexHeatmap/pheatmap",
+      "backend_python": "seaborn",
+      "status": "tested",
+      "priority": "high",
+      "difficulty": "intermediate",
+      "data_type": [
+        "matrix",
+        "continuous"
+      ],
+      "tags": [
+        "dataviz",
+        "chart",
+        "heatmap",
+        "matrix",
+        "r",
+        "python"
+      ]
+    },
+    {
+      "id": "多面板组合图_MultiPanel",
+      "file": "科研数据可视化知识库/02_图表类型知识卡片/10_多面板组合图/多面板组合图_MultiPanel.md",
+      "chart_name": "多面板组合图",
+      "chart_name_en": "Multi-panel figure",
+      "chart_family": "多面板组合图",
+      "backend_r": "patchwork/cowplot",
+      "backend_python": "matplotlib gridspec",
+      "status": "tested",
+      "priority": "high",
+      "difficulty": "intermediate",
+      "data_type": [
+        "composite"
+      ],
+      "tags": [
+        "dataviz",
+        "chart",
+        "multipanel",
+        "figure",
+        "layout",
+        "r",
+        "python"
+      ]
+    }
+  ]
+}

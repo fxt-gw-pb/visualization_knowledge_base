@@ -1,0 +1,16 @@
+# R 默认绘图副产物（脚本误触会生成在工作目录）
+Rplots.pdf
+
+# Python
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# OS / 编辑器
+.DS_Store
+Thumbs.db
+
+# Obsidian 工作区本地状态（保留库内笔记，忽略个人 UI 状态）
+.obsidian/workspace*.json
+.obsidian/cache
+.trash/

@@ -1,0 +1,24 @@
+# conda 环境锁定 —— 科研数据可视化知识库 Python 后端
+# 重建： conda env create -f environment.yml
+# 之后解释器位于 <conda>/envs/viz/bin/python
+# 注意：本库脚本刻意不依赖 PyYAML（build_registry.py 自带零依赖解析器）。
+name: viz
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python>=3.11
+  - pandas
+  - numpy
+  - scipy
+  - matplotlib
+  - seaborn
+  - scikit-learn
+  - statsmodels
+  - pip
+  - pip:
+      - lifelines
+      # 可选：顶刊风格主题
+      - SciencePlots
+      # 可选：ggplot2 风格 Python 绘图
+      - plotnine
