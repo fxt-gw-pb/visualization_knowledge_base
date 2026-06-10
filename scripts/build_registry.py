@@ -41,6 +41,10 @@ TEMPLATE_MAP = {
     "山峦图_Ridgeline": "ridgeline", "柱状图_Bar": "bar",
     "CONSORT流程图_Consort": "consort", "火山图_Volcano": "volcano",
     "PCA图_PCA": "pca",
+    # 第三批（EHR / 真实世界数据挖掘）
+    "缺失数据图_Missingness": "missingness", "混淆矩阵_ConfusionMatrix": "confusion",
+    "特征重要性图_FeatureImportance": "importance", "决策曲线_DCA": "dca",
+    "竞争风险累积发病图_CompetingRisk": "cif", "Swimmer图_Swimmer": "swimmer",
 }
 
 

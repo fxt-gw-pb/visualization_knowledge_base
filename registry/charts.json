@@ -1,7 +1,7 @@
 {
   "_generated_by": "scripts/build_registry.py",
   "_note": "派生产物，请勿手改；改卡片 frontmatter 后重跑脚本",
-  "count": 19,
+  "count": 25,
   "charts": [
     {
       "id": "密度图_Density",
@@ -297,6 +297,35 @@
       ]
     },
     {
+      "id": "特征重要性图_FeatureImportance",
+      "file": "科研数据可视化知识库/02_图表类型知识卡片/05_模型结果图/特征重要性图_FeatureImportance.md",
+      "chart_name": "特征重要性图",
+      "chart_name_en": "Feature importance / SHAP summary",
+      "chart_family": "模型结果图",
+      "backend_r": "pROC (置换重要性)",
+      "backend_python": "shap (beeswarm)",
+      "template_python": "templates/python/importance.py",
+      "template_r": "templates/r/importance.R",
+      "status": "tested",
+      "priority": "high",
+      "difficulty": "intermediate",
+      "data_type": [
+        "feature_matrix",
+        "model"
+      ],
+      "tags": [
+        "dataviz",
+        "chart",
+        "feature-importance",
+        "shap",
+        "interpretability",
+        "machine-learning",
+        "ehr",
+        "r",
+        "python"
+      ]
+    },
+    {
       "id": "ROC曲线_ROC",
       "file": "科研数据可视化知识库/02_图表类型知识卡片/06_预测模型评价图/ROC曲线_ROC.md",
       "chart_name": "ROC 曲线",
@@ -318,6 +347,34 @@
         "chart",
         "roc",
         "auc",
+        "model-evaluation",
+        "r",
+        "python"
+      ]
+    },
+    {
+      "id": "决策曲线_DCA",
+      "file": "科研数据可视化知识库/02_图表类型知识卡片/06_预测模型评价图/决策曲线_DCA.md",
+      "chart_name": "决策曲线分析",
+      "chart_name_en": "Decision curve analysis (DCA)",
+      "chart_family": "预测模型评价图",
+      "backend_r": "ggplot2",
+      "backend_python": "matplotlib",
+      "template_python": "templates/python/dca.py",
+      "template_r": "templates/r/dca.R",
+      "status": "tested",
+      "priority": "high",
+      "difficulty": "intermediate",
+      "data_type": [
+        "predicted_probability",
+        "binary_outcome"
+      ],
+      "tags": [
+        "dataviz",
+        "chart",
+        "dca",
+        "net-benefit",
+        "clinical-utility",
         "model-evaluation",
         "r",
         "python"
@@ -350,6 +407,33 @@
       ]
     },
     {
+      "id": "混淆矩阵_ConfusionMatrix",
+      "file": "科研数据可视化知识库/02_图表类型知识卡片/06_预测模型评价图/混淆矩阵_ConfusionMatrix.md",
+      "chart_name": "混淆矩阵热图",
+      "chart_name_en": "Confusion matrix",
+      "chart_family": "预测模型评价图",
+      "backend_r": "ggplot2",
+      "backend_python": "scikit-learn/seaborn",
+      "template_python": "templates/python/confusion.py",
+      "template_r": "templates/r/confusion.R",
+      "status": "tested",
+      "priority": "high",
+      "difficulty": "basic",
+      "data_type": [
+        "predicted_class",
+        "actual_class"
+      ],
+      "tags": [
+        "dataviz",
+        "chart",
+        "confusion-matrix",
+        "classification",
+        "model-evaluation",
+        "r",
+        "python"
+      ]
+    },
+    {
       "id": "KM生存曲线_KaplanMeier",
       "file": "科研数据可视化知识库/02_图表类型知识卡片/07_生存分析图/KM生存曲线_KaplanMeier.md",
       "chart_name": "Kaplan-Meier 生存曲线",
@@ -372,6 +456,35 @@
         "chart",
         "survival",
         "kaplan-meier",
+        "r",
+        "python"
+      ]
+    },
+    {
+      "id": "竞争风险累积发病图_CompetingRisk",
+      "file": "科研数据可视化知识库/02_图表类型知识卡片/07_生存分析图/竞争风险累积发病图_CompetingRisk.md",
+      "chart_name": "竞争风险累积发病图",
+      "chart_name_en": "Cumulative incidence (competing risks)",
+      "chart_family": "生存分析图",
+      "backend_r": "survival (broom)",
+      "backend_python": "lifelines",
+      "template_python": "templates/python/cif.py",
+      "template_r": "templates/r/cif.R",
+      "status": "tested",
+      "priority": "high",
+      "difficulty": "advanced",
+      "data_type": [
+        "time_to_event",
+        "competing_event",
+        "categorical_group"
+      ],
+      "tags": [
+        "dataviz",
+        "chart",
+        "competing-risks",
+        "cumulative-incidence",
+        "survival",
+        "rwd",
         "r",
         "python"
       ]
@@ -505,6 +618,62 @@
         "consort",
         "flowchart",
         "epidemiology",
+        "r",
+        "python"
+      ]
+    },
+    {
+      "id": "Swimmer图_Swimmer",
+      "file": "科研数据可视化知识库/02_图表类型知识卡片/11_医学流行病学常用图/Swimmer图_Swimmer.md",
+      "chart_name": "Swimmer plot",
+      "chart_name_en": "Swimmer plot",
+      "chart_family": "医学流行病学常用图",
+      "backend_r": "ggplot2",
+      "backend_python": "matplotlib",
+      "template_python": "templates/python/swimmer.py",
+      "template_r": "templates/r/swimmer.R",
+      "status": "tested",
+      "priority": "medium",
+      "difficulty": "intermediate",
+      "data_type": [
+        "per_patient_timeline",
+        "events"
+      ],
+      "tags": [
+        "dataviz",
+        "chart",
+        "swimmer",
+        "patient-timeline",
+        "oncology",
+        "rwd",
+        "r",
+        "python"
+      ]
+    },
+    {
+      "id": "缺失数据图_Missingness",
+      "file": "科研数据可视化知识库/02_图表类型知识卡片/12_数据质量图/缺失数据图_Missingness.md",
+      "chart_name": "缺失数据模式图",
+      "chart_name_en": "Missing data pattern",
+      "chart_family": "数据质量图",
+      "backend_r": "ggplot2 (naniar/VIM 可选)",
+      "backend_python": "matplotlib (missingno 可选)",
+      "template_python": "templates/python/missingness.py",
+      "template_r": "templates/r/missingness.R",
+      "status": "tested",
+      "priority": "high",
+      "difficulty": "basic",
+      "data_type": [
+        "tabular",
+        "missingness"
+      ],
+      "tags": [
+        "dataviz",
+        "chart",
+        "missing-data",
+        "data-quality",
+        "ehr",
+        "rwd",
         "r",
         "python"
       ]

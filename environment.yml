@@ -18,6 +18,8 @@ dependencies:
   - pip
   - pip:
       - lifelines
+      # ML 可解释性（SHAP beeswarm，特征重要性图模板用）
+      - shap
       # 可选：顶刊风格主题
       - SciencePlots
       # 可选：ggplot2 风格 Python 绘图
