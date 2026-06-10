@@ -10,6 +10,9 @@ tags: [dataviz, skill, design, agent]
 
 > 说明本知识库**如何长成**一个 R/Python 双后端的自动作图 Skill。当前阶段先把知识库做对做全；本文是“未来形态”的蓝图，倒推现在该怎么沉淀知识。
 
+> [!success] MVP 已落地（2026-06-10）
+> Claude Code Skill **`sci-plot`** 已上线（`~/.claude/skills/sci-plot/SKILL.md`），把本文 §2 的「知识库↔Skill 映射」落成可执行流水线：读 `registry/charts.json` 选型 → 后端路由 → 卡片模板注参 → 出图 → 质检 → 返修。键入 `/sci-plot` 或直接描述作图需求触发。它是**薄路由层**，知识仍在卡片里。进度见 [[MVP路线图]]。
+
 ## 1. 愿景一句话
 
 > 用户给「数据 + 研究问题 + 用途」，Skill 自动**选图 → 选后端 → 选配色/架构 → 生成可运行 R/Python 代码 → 出图 → 自检返修 → 导出**，质量逐步逼近顶刊。

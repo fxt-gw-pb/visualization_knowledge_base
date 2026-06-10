@@ -10,6 +10,12 @@ tags: [dataviz, skill, roadmap, mvp]
 
 > 从“知识库”到“可调用作图 Skill”的分阶段路线。每阶段有明确产出与“完成定义（DoD）”。
 
+> [!note] 实现进展（2026-06-10 追加）
+> - 阶段 0、1 **已完成**（12 卡片全 `tested`，R/Python 各 14 张实测图）。
+> - 阶段 2 已有 **MVP**：`registry/charts.json`（由 `scripts/build_registry.py` 从 frontmatter 派生）即机器可读 spec；配色 registry 已命名化。
+> - 阶段 3、4 已有 **agent 驱动 MVP**：Claude Code Skill **`sci-plot`**（`~/.claude/skills/sci-plot/`）把「选型→后端路由→模板注参→出图→质检→返修」落成可执行流水线，读本 KB 而非硬编码。键入 `/sci-plot` 或直接描述作图需求即可触发。
+> - 仍待做的是把阶段 3 从 agent 推理升级为**确定性 spec→代码渲染器**，以及阶段 5 回归测试 + 扩展图表族。
+
 ## 阶段 0：知识库地基 ✅（2026-06-10 已完成）
 
 **产出**
@@ -73,11 +79,13 @@ tags: [dataviz, skill, roadmap, mvp]
 | 阶段 | 关键产出 | 状态 | 依赖 |
 |---|---|---|---|
 | 0 知识库地基 | 结构 + 12 卡片 + 测试区 | ✅ done | — |
-| 1 跑通最小集 | 8 ⭐ 图 tested | ⏳ next | 环境 + 编码确认 |
-| 2 机器可读 spec | chart_spec + registry | ⬜ | 阶段1 |
-| 3 选型+路由+生成 | 决策器 + 渲染器 | ⬜ | 阶段2 |
-| 4 质检+返修 | 打分器 + 后处理 | ⬜ | 阶段3 |
+| 1 跑通最小集 | 12 卡片 tested（R/Py 各 14 图）| ✅ done | 环境 + 编码确认 |
+| 2 机器可读 spec | `registry/charts.json` + registry | 🟡 MVP | 阶段1 |
+| 3 选型+路由+生成 | `sci-plot` skill（agent 驱动）| 🟡 MVP | 阶段2 |
+| 4 质检+返修 | skill 内建质检/返修引用 | 🟡 MVP | 阶段3 |
 | 5 回归+扩展 | 回归集 + 第二批族 | ⬜ | 阶段4 |
+
+> 🟡 MVP = 已有可用最小实现（agent 驱动），待升级为确定性渲染器 / 自动化打分器。
 
 ## 优先级原则
 
