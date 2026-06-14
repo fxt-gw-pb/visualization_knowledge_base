@@ -9,7 +9,7 @@ tags: [dataviz, index, generated]
 > ⚠️ 本文件由 `scripts/build_registry.py` 从各卡片 frontmatter 生成，**请勿手改**。
 > 改了卡片后重跑脚本即可刷新。机器可读版见 `registry/charts.json`。
 
-共 25 张卡片。
+共 35 张卡片。
 
 ## 分布图
 
@@ -27,6 +27,15 @@ tags: [dataviz, index, generated]
 |---|---|---|---|---|---|
 | [[CONSORT流程图_Consort]] | CONSORT flow diagram | tested | high | ggplot2 (手搓) / DiagrammeR | matplotlib (手搓) |
 | [[Swimmer图_Swimmer]] | Swimmer plot | tested | medium | ggplot2 | matplotlib |
+| [[状态转移图_Alluvial]] | Alluvial / state transition diagram | tested | medium | ggplot2 | matplotlib |
+
+## 因果推断图
+
+| 卡片 | EN | 状态 | 优先级 | R 后端 | Python 后端 |
+|---|---|---|---|---|---|
+| [[倾向评分重叠图_PSOverlap]] | Propensity score overlap | tested | high | ggplot2 | matplotlib |
+| [[协变量平衡图_LovePlot]] | Covariate balance (Love plot) | tested | high | ggplot2 | matplotlib |
+| [[限制性立方样条_RCS]] | Restricted cubic spline (RCS) dose-response | tested | high | ggplot2 | matplotlib |
 
 ## 多面板组合图
 
@@ -44,12 +53,15 @@ tags: [dataviz, index, generated]
 
 | 卡片 | EN | 状态 | 优先级 | R 后端 | Python 后端 |
 |---|---|---|---|---|---|
+| [[个体轨迹图_Spaghetti]] | Spaghetti plot (individual trajectories) | tested | high | ggplot2 | matplotlib |
 | [[折线趋势图_Line]] | Line plot | tested | high | ggplot2 | matplotlib/seaborn |
 
 ## 模型结果图
 
 | 卡片 | EN | 状态 | 优先级 | R 后端 | Python 后端 |
 |---|---|---|---|---|---|
+| [[亚组森林图_Subgroup]] | Subgroup forest plot | tested | high | ggplot2 | matplotlib |
+| [[列线图_Nomogram]] | Nomogram | tested | high | ggplot2 | matplotlib |
 | [[森林图_ForestPlot]] | Forest plot | tested | high | forestploter | matplotlib |
 | [[特征重要性图_FeatureImportance]] | Feature importance / SHAP summary | tested | high | pROC (置换重要性) | shap (beeswarm) |
 
@@ -64,6 +76,7 @@ tags: [dataviz, index, generated]
 
 | 卡片 | EN | 状态 | 优先级 | R 后端 | Python 后端 |
 |---|---|---|---|---|---|
+| [[BlandAltman一致性图_BlandAltman]] | Bland-Altman agreement plot | tested | high | ggplot2 | matplotlib |
 | [[散点图_Scatter]] | Scatter plot | tested | high | ggplot2 | seaborn/matplotlib |
 
 ## 组学图
@@ -79,6 +92,13 @@ tags: [dataviz, index, generated]
 | [[柱状图_Bar]] | Bar plot | tested | high | ggplot2 | matplotlib/seaborn |
 | [[点估计置信区间图_PointRange]] | Point-range plot | tested | high | ggplot2 | matplotlib |
 | [[箱线图_Boxplot]] | Boxplot | tested | high | ggplot2 + ggpubr | seaborn |
+
+## 证据合成图
+
+| 卡片 | EN | 状态 | 优先级 | R 后端 | Python 后端 |
+|---|---|---|---|---|---|
+| [[Meta森林图_MetaForest]] | Meta-analysis forest plot | tested | high | ggplot2 | matplotlib |
+| [[漏斗图_Funnel]] | Funnel plot | tested | medium | ggplot2 | matplotlib |
 
 ## 预测模型评价图
 

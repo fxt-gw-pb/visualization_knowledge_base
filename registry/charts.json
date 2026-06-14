@@ -1,7 +1,7 @@
 {
   "_generated_by": "scripts/build_registry.py",
   "_note": "派生产物，请勿手改；改卡片 frontmatter 后重跑脚本",
-  "count": 25,
+  "count": 35,
   "charts": [
     {
       "id": "密度图_Density",
@@ -216,6 +216,33 @@
       ]
     },
     {
+      "id": "BlandAltman一致性图_BlandAltman",
+      "file": "科研数据可视化知识库/02_图表类型知识卡片/03_相关性图/BlandAltman一致性图_BlandAltman.md",
+      "chart_name": "Bland-Altman一致性图",
+      "chart_name_en": "Bland-Altman agreement plot",
+      "chart_family": "相关性图",
+      "backend_r": "ggplot2",
+      "backend_python": "matplotlib",
+      "template_python": "templates/python/blandaltman.py",
+      "template_r": "templates/r/blandaltman.R",
+      "status": "tested",
+      "priority": "high",
+      "difficulty": "basic",
+      "data_type": [
+        "paired_measurements"
+      ],
+      "tags": [
+        "dataviz",
+        "chart",
+        "bland-altman",
+        "agreement",
+        "method-comparison",
+        "reliability",
+        "r",
+        "python"
+      ]
+    },
+    {
       "id": "散点图_Scatter",
       "file": "科研数据可视化知识库/02_图表类型知识卡片/03_相关性图/散点图_Scatter.md",
       "chart_name": "散点图",
@@ -237,6 +264,35 @@
         "chart",
         "scatter",
         "correlation",
+        "r",
+        "python"
+      ]
+    },
+    {
+      "id": "个体轨迹图_Spaghetti",
+      "file": "科研数据可视化知识库/02_图表类型知识卡片/04_时间趋势图/个体轨迹图_Spaghetti.md",
+      "chart_name": "个体轨迹图",
+      "chart_name_en": "Spaghetti plot (individual trajectories)",
+      "chart_family": "时间趋势图",
+      "backend_r": "ggplot2",
+      "backend_python": "matplotlib",
+      "template_python": "templates/python/spaghetti.py",
+      "template_r": "templates/r/spaghetti.R",
+      "status": "tested",
+      "priority": "high",
+      "difficulty": "intermediate",
+      "data_type": [
+        "longitudinal",
+        "repeated_measures"
+      ],
+      "tags": [
+        "dataviz",
+        "chart",
+        "spaghetti",
+        "trajectory",
+        "longitudinal",
+        "mixed-model",
+        "ehr",
         "r",
         "python"
       ]
@@ -264,6 +320,62 @@
         "line",
         "trend",
         "longitudinal",
+        "r",
+        "python"
+      ]
+    },
+    {
+      "id": "亚组森林图_Subgroup",
+      "file": "科研数据可视化知识库/02_图表类型知识卡片/05_模型结果图/亚组森林图_Subgroup.md",
+      "chart_name": "亚组分析森林图",
+      "chart_name_en": "Subgroup forest plot",
+      "chart_family": "模型结果图",
+      "backend_r": "ggplot2",
+      "backend_python": "matplotlib",
+      "template_python": "templates/python/subgroup.py",
+      "template_r": "templates/r/subgroup.R",
+      "status": "tested",
+      "priority": "high",
+      "difficulty": "intermediate",
+      "data_type": [
+        "subgroup_effect_ci",
+        "interaction_p"
+      ],
+      "tags": [
+        "dataviz",
+        "chart",
+        "subgroup",
+        "forest-plot",
+        "interaction",
+        "effect-modification",
+        "r",
+        "python"
+      ]
+    },
+    {
+      "id": "列线图_Nomogram",
+      "file": "科研数据可视化知识库/02_图表类型知识卡片/05_模型结果图/列线图_Nomogram.md",
+      "chart_name": "列线图",
+      "chart_name_en": "Nomogram",
+      "chart_family": "模型结果图",
+      "backend_r": "ggplot2",
+      "backend_python": "matplotlib",
+      "template_python": "templates/python/nomogram.py",
+      "template_r": "templates/r/nomogram.R",
+      "status": "tested",
+      "priority": "high",
+      "difficulty": "advanced",
+      "data_type": [
+        "model_coefficients",
+        "predictor_ranges"
+      ],
+      "tags": [
+        "dataviz",
+        "chart",
+        "nomogram",
+        "prediction-model",
+        "risk-score",
+        "clinical-prediction",
         "r",
         "python"
       ]
@@ -651,6 +763,36 @@
       ]
     },
     {
+      "id": "状态转移图_Alluvial",
+      "file": "科研数据可视化知识库/02_图表类型知识卡片/11_医学流行病学常用图/状态转移图_Alluvial.md",
+      "chart_name": "状态转移图",
+      "chart_name_en": "Alluvial / state transition diagram",
+      "chart_family": "医学流行病学常用图",
+      "backend_r": "ggplot2",
+      "backend_python": "matplotlib",
+      "template_python": "templates/python/alluvial.py",
+      "template_r": "templates/r/alluvial.R",
+      "status": "tested",
+      "priority": "medium",
+      "difficulty": "advanced",
+      "data_type": [
+        "categorical_state",
+        "longitudinal"
+      ],
+      "tags": [
+        "dataviz",
+        "chart",
+        "alluvial",
+        "sankey",
+        "state-transition",
+        "patient-flow",
+        "ehr",
+        "rwd",
+        "r",
+        "python"
+      ]
+    },
+    {
       "id": "缺失数据图_Missingness",
       "file": "科研数据可视化知识库/02_图表类型知识卡片/12_数据质量图/缺失数据图_Missingness.md",
       "chart_name": "缺失数据模式图",
@@ -674,6 +816,155 @@
         "data-quality",
         "ehr",
         "rwd",
+        "r",
+        "python"
+      ]
+    },
+    {
+      "id": "倾向评分重叠图_PSOverlap",
+      "file": "科研数据可视化知识库/02_图表类型知识卡片/13_因果推断图/倾向评分重叠图_PSOverlap.md",
+      "chart_name": "倾向评分重叠图",
+      "chart_name_en": "Propensity score overlap",
+      "chart_family": "因果推断图",
+      "backend_r": "ggplot2",
+      "backend_python": "matplotlib",
+      "template_python": "templates/python/psoverlap.py",
+      "template_r": "templates/r/psoverlap.R",
+      "status": "tested",
+      "priority": "high",
+      "difficulty": "basic",
+      "data_type": [
+        "propensity_score",
+        "treatment_group"
+      ],
+      "tags": [
+        "dataviz",
+        "chart",
+        "propensity-score",
+        "overlap",
+        "positivity",
+        "common-support",
+        "causal-inference",
+        "rwd",
+        "r",
+        "python"
+      ]
+    },
+    {
+      "id": "协变量平衡图_LovePlot",
+      "file": "科研数据可视化知识库/02_图表类型知识卡片/13_因果推断图/协变量平衡图_LovePlot.md",
+      "chart_name": "协变量平衡图",
+      "chart_name_en": "Covariate balance (Love plot)",
+      "chart_family": "因果推断图",
+      "backend_r": "ggplot2",
+      "backend_python": "matplotlib",
+      "template_python": "templates/python/love.py",
+      "template_r": "templates/r/love.R",
+      "status": "tested",
+      "priority": "high",
+      "difficulty": "intermediate",
+      "data_type": [
+        "covariate_smd",
+        "treatment_group"
+      ],
+      "tags": [
+        "dataviz",
+        "chart",
+        "love-plot",
+        "smd",
+        "balance",
+        "psm",
+        "iptw",
+        "causal-inference",
+        "rwd",
+        "r",
+        "python"
+      ]
+    },
+    {
+      "id": "限制性立方样条_RCS",
+      "file": "科研数据可视化知识库/02_图表类型知识卡片/13_因果推断图/限制性立方样条_RCS.md",
+      "chart_name": "限制性立方样条剂量反应",
+      "chart_name_en": "Restricted cubic spline (RCS) dose-response",
+      "chart_family": "因果推断图",
+      "backend_r": "ggplot2",
+      "backend_python": "matplotlib",
+      "template_python": "templates/python/rcs.py",
+      "template_r": "templates/r/rcs.R",
+      "status": "tested",
+      "priority": "high",
+      "difficulty": "advanced",
+      "data_type": [
+        "continuous_exposure",
+        "binary_or_survival_outcome"
+      ],
+      "tags": [
+        "dataviz",
+        "chart",
+        "rcs",
+        "spline",
+        "dose-response",
+        "nonlinear",
+        "causal-inference",
+        "epidemiology",
+        "r",
+        "python"
+      ]
+    },
+    {
+      "id": "Meta森林图_MetaForest",
+      "file": "科研数据可视化知识库/02_图表类型知识卡片/14_证据合成图/Meta森林图_MetaForest.md",
+      "chart_name": "Meta分析森林图",
+      "chart_name_en": "Meta-analysis forest plot",
+      "chart_family": "证据合成图",
+      "backend_r": "ggplot2",
+      "backend_python": "matplotlib",
+      "template_python": "templates/python/metaforest.py",
+      "template_r": "templates/r/metaforest.R",
+      "status": "tested",
+      "priority": "high",
+      "difficulty": "intermediate",
+      "data_type": [
+        "study_effect_ci",
+        "weights"
+      ],
+      "tags": [
+        "dataviz",
+        "chart",
+        "meta-analysis",
+        "forest-plot",
+        "pooled-effect",
+        "heterogeneity",
+        "evidence-synthesis",
+        "r",
+        "python"
+      ]
+    },
+    {
+      "id": "漏斗图_Funnel",
+      "file": "科研数据可视化知识库/02_图表类型知识卡片/14_证据合成图/漏斗图_Funnel.md",
+      "chart_name": "漏斗图",
+      "chart_name_en": "Funnel plot",
+      "chart_family": "证据合成图",
+      "backend_r": "ggplot2",
+      "backend_python": "matplotlib",
+      "template_python": "templates/python/funnel.py",
+      "template_r": "templates/r/funnel.R",
+      "status": "tested",
+      "priority": "medium",
+      "difficulty": "basic",
+      "data_type": [
+        "study_effect",
+        "study_precision"
+      ],
+      "tags": [
+        "dataviz",
+        "chart",
+        "funnel-plot",
+        "publication-bias",
+        "small-study-effect",
+        "meta-analysis",
+        "evidence-synthesis",
         "r",
         "python"
       ]

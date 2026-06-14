@@ -45,6 +45,12 @@ TEMPLATE_MAP = {
     "缺失数据图_Missingness": "missingness", "混淆矩阵_ConfusionMatrix": "confusion",
     "特征重要性图_FeatureImportance": "importance", "决策曲线_DCA": "dca",
     "竞争风险累积发病图_CompetingRisk": "cif", "Swimmer图_Swimmer": "swimmer",
+    # 第四批（因果推断/RWD + 生物统计经典 + 纵向/状态转移 + 证据合成）
+    "协变量平衡图_LovePlot": "love", "倾向评分重叠图_PSOverlap": "psoverlap",
+    "限制性立方样条_RCS": "rcs", "亚组森林图_Subgroup": "subgroup",
+    "BlandAltman一致性图_BlandAltman": "blandaltman", "列线图_Nomogram": "nomogram",
+    "个体轨迹图_Spaghetti": "spaghetti", "状态转移图_Alluvial": "alluvial",
+    "Meta森林图_MetaForest": "metaforest", "漏斗图_Funnel": "funnel",
 }
 
 
